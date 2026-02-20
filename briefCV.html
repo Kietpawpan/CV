@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เส้นทางความสำเร็จและวิสัยทัศน์: ดร. มนตรี เกียรติเผ่าพันธ์</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-blue: #003366;
+            --secondary-blue: #0056b3;
+            --accent-green: #28a745;
+            --tech-bg: #001f3f;
+            --light-gray: #f4f7f6;
+            --text-dark: #333;
+            --text-light: #fff;
+        }
+
+        body {
+            font-family: 'Sarabun', sans-serif;
+            line-height: 1.5;
+            color: var(--text-dark);
+            background-color: #e9ecef;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        /* --- Header Section --- */
+        .header-section {
+            background: linear-gradient(135deg, var(--accent-green) 0%, var(--primary-blue) 100%);
+            color: var(--text-light);
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        .header-title h1 {
+            margin: 0;
+            font-size: 2.2em;
+            font-weight: 700;
+        }
+
+        .header-title h2 {
+            margin: 10px 0 0;
+            font-size: 1.4em;
+            font-weight: 400;
+        }
+
+        /* ปรับปรุงส่วนรูปโปรไฟล์ให้รองรับภาพจริง */
+        .profile-icon {
+            background-color: #fff;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 30px auto -60px; /* Negative margin to pull it down */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 5px solid var(--accent-green);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 10;
+            overflow: hidden; /* เพิ่มเพื่อไม่ให้รูปภาพล้นขอบวงกลม */
+        }
+
+        .profile-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* จัดให้รูปภาพเต็มพื้นที่โดยไม่เสียสัดส่วน */
+        }
+
+        /* --- Main Content Grid --- */
+        .content-wrapper {
+            padding: 60px 30px 30px;
+        }
+
+        .section-header {
+            font-size: 1.5em;
+            color: var(--primary-blue);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+        }
+
+        .section-header i {
+            margin-right: 15px;
+            color: var(--accent-green);
+            font-size: 1.2em;
+        }
+
+        /* Two Column Layout */
+        .two-col-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .col-half {
+            flex: 1 1 45%;
+            min-width: 300px;
+        }
+
+        /* List Styles with Icons */
+        .icon-list-item {
+            display: flex;
+            margin-bottom: 20px;
+            align-items: flex-start;
+        }
+
+        .icon-wrapper {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            background-color: #eef2f7;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+        }
+
+        .icon-wrapper i {
+            color: var(--secondary-blue);
+            font-size: 1.5em;
+        }
+        .icon-wrapper.green i { color: var(--accent-green); }
+        .icon-wrapper.gold i { color: #d4af37; }
+
+
+        .list-content h4 {
+            margin: 0 0 5px;
+            color: var(--primary-blue);
+            font-weight: 700;
+        }
+
+        .list-content p {
+            margin: 0;
+            font-size: 0.95em;
+            color: #555;
+        }
+
+        /* --- Timeline Styles --- */
+        .timeline-container {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 30px;
+        }
+        
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 50px;
+            right: 50px;
+            height: 4px;
+            background: #e0e0e0;
+            z-index: 0;
+        }
+
+        .timeline-item {
+            flex: 1;
+            text-align: center;
+            padding: 0 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .timeline-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--secondary-blue);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 15px;
+            font-size: 1.5em;
+            border: 4px solid #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .timeline-item:last-child .timeline-icon { background-color: var(--accent-green); }
+
+        .timeline-year {
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .timeline-desc {
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        /* --- Tech Expertise Section --- */
+        .tech-section {
+            background-color: var(--tech-bg);
+            color: var(--text-light);
+            padding: 40px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+            /* สร้าง Pattern วงจรไฟฟ้าจางๆ เป็นพื้นหลัง */
+            background-image: radial-gradient(circle at 20% 50%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+                              linear-gradient(135deg, transparent 45%, rgba(0, 191, 255, 0.05) 50%, transparent 55%),
+                              linear-gradient(45deg, transparent 45%, rgba(0, 191, 255, 0.05) 50%, transparent 55%);
+            background-size: 100% 100%, 20px 20px, 20px 20px;
+        }
+
+        .tech-section .section-header {
+            color: var(--text-light);
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .tech-section .section-header i { color: #00d2ff; }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .tech-item {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .tech-icon-box {
+            background: rgba(0, 210, 255, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            margin-right: 15px;
+        }
+        .tech-icon-box i {
+            font-size: 2em;
+            color: #00d2ff;
+        }
+
+        .tech-content h4 {
+            margin: 0 0 10px;
+            color: #00d2ff;
+            font-size: 1.1em;
+        }
+
+        .tech-content p {
+            margin: 0;
+            font-size: 0.9em;
+            color: rgba(255,255,255,0.8);
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .header-title h1 { font-size: 1.8em; }
+            .two-col-grid { flex-direction: column; gap: 30px; }
+            .timeline-container { flex-direction: column; align-items: flex-start; }
+            .timeline-container::before { display: none; }
+            .timeline-item { text-align: left; display: flex; margin-bottom: 20px; }
+            .timeline-icon { margin: 0 15px 0 0; width: 50px; height: 50px; font-size: 1.2em; }
+            .content-wrapper { padding: 60px 20px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header class="header-section">
+            <div class="header-title">
+                <h1>ประวัติย่อ: นายมนตรี เกียรติเผ่าพันธ์</h1>
+                <h2>ผู้อำนวยการระดับสูง</h2>
+            </div>
+        </header>
+        
+        <div class="profile-icon">
+            <img src="Monte.JPEG" alt="รูปโปรไฟล์ ดร. มนตรี">
+        </div>
+
+        <div class="content-wrapper">
+            <div class="two-col-grid">
+                <div class="col-half">
+                    <h3 class="section-header"><i class="fas fa-graduation-cap"></i> 1. ประวัติการศึกษาและข้อมูลส่วนบุคคล (Core Credentials)</h3>
+                    
+                    <div class="icon-list-item">
+                        <div class="icon-wrapper green"><i class="fas fa-certificate"></i></div>
+                        <div class="list-content">
+                            <h4>ผู้เชี่ยวชาญตัวจริงด้านการจัดการสิ่งแวดล้อม (PhD)</h4>
+                            <p>สำเร็จการศึกษาในระดับปริญญาเอก โท และตรี ด้านการจัดการสิ่งแวดล้อมและวาริชศาสตร์ จากมหาวิทยาลัยสงขลานครินทร์</p>
+                        </div>
+                    </div>
+                    <div class="icon-list-item">
+                        <div class="icon-wrapper"><i class="fas fa-briefcase"></i></div>
+                        <div class="list-content">
+                            <h4>ประสบการณ์รับราชการกว่า 15 ปี</h4>
+                            <p>เริ่มรับราชการในปี 2552 ปัจจุบันดำรงตำแหน่งผู้อำนวยการระดับสูง และมีกำหนดเกษียณอายุราชการในปี 2579</p>
+                        </div>
+                    </div>
+                    <div class="icon-list-item">
+                        <div class="icon-wrapper"><i class="fas fa-users-cog"></i></div>
+                        <div class="list-content">
+                            <h4>ข้าราชการผู้มีผลสัมฤทธิ์สูง (HiPPS)</h4>
+                            <p>ผ่านการบ่มเพาะและหมุนเวียนงานในหน่วยงานสำคัญ เช่น สำนักงานสภาพัฒนาการเศรษฐกิจและสังคมแห่งชาติ (สศช.)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-half">
+                    <h3 class="section-header"><i class="fas fa-route"></i> 2. เส้นทางอาชีพและประสบการณ์บริหาร (Career Milestones)</h3>
+                    
+                    <div class="timeline-container">
+                        <div class="timeline-item">
+                            <div class="timeline-icon"><i class="far fa-calendar-alt"></i></div>
+                            <span class="timeline-year">2556 - 2567</span>
+                            <div class="timeline-desc"><strong>มือประสานและกลั่นกรองงานระดับนโยบาย</strong><br>ปฏิบัติหน้าที่คณะทำงานและ Executive Assistant ของปลัด/รองปลัดกระทรวงฯ ต่อเนื่องหลายสมัย</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <span class="timeline-year">2561</span>
+                            <div class="timeline-desc"><strong>ผู้นำการเปลี่ยนแปลง ณ ศูนย์บริการร่วม ทส.</strong><br>ดำรงตำแหน่งผู้อำนวยการศูนย์บริการร่วมฯ โดยยกระดับงานบริการจนได้รับรางวัลระดับประเทศ</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon"><i class="fas fa-flag-checkered"></i></div>
+                            <span class="timeline-year">ปัจจุบัน</span>
+                            <div class="timeline-desc"><strong>ผู้อำนวยการ ทสจ.ศรีสะเกษ และ สคพ. ที่ 11</strong><br>ดำรงตำแหน่งปัจจุบัน และปฏิบัติหน้าที่หัวหน้าศูนย์สื่อสารการแก้ไขปัญหามลพิษทางอากาศ (ศกพ.) ส่วนภูมิภาค</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="tech-section">
+                <h3 class="section-header"><i class="fas fa-microchip"></i> 3. ความเชี่ยวชาญพิเศษ: ผู้บริหารสาย Tech (Digital Expertise)</h3>
+                
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="tech-icon-box"><i class="fas fa-layer-group"></i></div>
+                        <div class="tech-content">
+                            <h4>Full Stack Developer & Digital Designer</h4>
+                            <p>มีทักษะการเขียนโปรแกรม (HTML/CSS/JS/PHP/Python) และออกแบบ e-Service Design มากกว่า 60 ผลงานบน GitHub</p>
+                        </div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon-box"><i class="fas fa-brain"></i></div>
+                        <div class="tech-content">
+                            <h4>นวัตกรรม AI และระบบบริการอัจฉริยะ</h4>
+                            <p>พัฒนา Chatbot และปัญญาประดิษฐ์ (InfoX) เพื่อช่วยพิจารณาคำขอข้อมูลข่าวสารของราชการตาม พ.ร.บ. ข้อมูลข่าวสารฯ</p>
+                        </div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon-box"><i class="fas fa-laptop-code"></i></div>
+                        <div class="tech-content">
+                            <h4>ระบบ e-Request รายแรกของกระทรวง</h4>
+                            <p>พัฒนา Web Application เพื่อให้ประชาชนยื่นและติดตามสถานะคำขอข้อมูลข่าวสารได้อย่างสะดวก รวดเร็ว และปลอดภัย</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="two-col-grid">
+                <div class="col-half">
+                    <h3 class="section-header"><i class="fas fa-trophy"></i> 4. รางวัลและเกียรติยศ (Awards & Recognitions)</h3>
+                    
+                    <div class="icon-list-item">
+                        <div class="icon-wrapper gold"><i class="fas fa-award"></i></div>
+                        <div class="list-content">
+                            <h4>รางวัลศูนย์ราชการสะดวก (GECC) ระดับก้าวหน้า</h4>
+                            <p>ได้รับรางวัลต่อเนื่องในปี 2561-2563 และระดับก้าวหน้า ในปี 2564 จากสำนักงานปลัดสำนักนายกรัฐมนตรี</p>
+                        </div>
+                    </div>
+                    <div class="icon-list-item">
+                        <div class="icon-wrapper gold"><i class="fas fa-medal"></i></div>
+                        <div class="list-content">
+                            <h4>รางวัลรัฐบาลดิจิทัล (Digital Government Award)</h4>
+                            <p>ได้รับรางวัลปี 2562 ในฐานะหน่วยงานที่สนับสนุนนโยบายยกเลิกการเรียกสำเนาเอกสารราชการ</p>
+                        </div>
+                    </div>
+                    <div class="icon-list-item">
+                        <div class="icon-wrapper gold"><i class="fas fa-shield-alt"></i></div>
+                        <div class="list-content">
+                            <h4>Compliance Award (PDPA)</h4>
+                            <p>รางวัลหน่วยงานที่มีการดำเนินการตามกฎหมายคุ้มครองข้อมูลส่วนบุคคลดีเด่น ปี 2566 จากกระทรวงดิจิทัลฯ</p>
+                        </div>
+                    </div>
+                    <div class="icon-list-item">
+                        <div class="icon-wrapper green"><i class="fas fa-globe-asia"></i></div>
+                        <div class="list-content">
+                            <h4>การยอมรับระดับสากลจาก World Bank</h4>
+                            <p>ได้รับกิตติกรรมประกาศจากการเป็นผู้ประสานงานหลักประเมินความเสียหายอุทกภัยปี 2554 (Thai Flood 2011)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-half">
+                    <h3 class="section-header"><i class="fas fa-rocket"></i> 5. วิสัยทัศน์สู่ “องค์กรดิจิทัลประสิทธิภาพสูง” (Smart PCD)</h3>
+                    
+                    <div class="icon-list-item">
+                        <div class="icon-wrapper"><i class="fas fa-sitemap"></i></div>
+                        <div class="list-content">
+                            <h4>โครงสร้างทันสมัย-ลดขั้นตอน-เน้นเทคโนโลยี</h4>
+                            <p>มุ่งปรับปรุงกระบวนงานให้คล่องตัว (Agile) ลดความซ้ำซ้อน และใช้ IT บูรณาการข้อมูลระหว่างหน่วยงาน</p>
+                        </div>
+                    </div>
+                    <div class="icon-list-item">
+                        <div class="icon-wrapper"><i class="fas fa-users"></i></div>
+                        <div class="list-content">
+                            <h4>พัฒนาคนและสร้างวัฒนธรรมการทำงานเป็นทีม</h4>
+                            <p>ส่งเสริมบุคลากรให้มีทักษะดิจิทัล สร้างสภาพแวดล้อมที่เอื้อต่อการเรียนรู้ และมีระบบประเมินผลที่เป็นธรรม</p>
+                        </div>
+                    </div>
+                    <div class="icon-list-item">
+                        <div class="icon-wrapper"><i class="fas fa-handshake"></i></div>
+                        <div class="list-content">
+                            <h4>ความโปร่งใสและการมีส่วนร่วมของประชาชน</h4>
+                            <p>สร้างช่องทางรับฟังความคิดเห็นที่เปิดกว้าง และทำให้ประชาชนเข้าถึงข้อมูลข่าวสารได้ง่ายภายใต้หลักธรรมาภิบาล</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> 
+    </div> 
+</body>
+</html>
